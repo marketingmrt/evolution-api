@@ -57,4 +57,4 @@ ENV DOCKER_ENV=true
 
 EXPOSE 8080
 
-CMD ["sh", "-c", "npx prisma generate && npx prisma migrate deploy && npm run start:prod"]
+CMD ["sh", "-c", "cp ./prisma/${DATABASE_PROVIDER}-schema.prisma ./prisma/schema.prisma && npx prisma generate && npx prisma migrate deploy && npm run start:prod"]
