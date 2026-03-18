@@ -19,7 +19,6 @@ COPY ./src ./src
 COPY ./public ./public
 COPY ./prisma ./prisma
 COPY ./manager ./manager
-COPY ./.env.example ./.env
 COPY ./runWithProvider.js ./
 
 COPY ./Docker ./Docker
@@ -57,4 +56,4 @@ ENV DOCKER_ENV=true
 
 EXPOSE 8080
 
-ENTRYPOINT ["/bin/bash", "-c", ". ./Docker/scripts/deploy_database.sh && npm run start:prod" ]
+CMD ["npm", "run", "start:prod"]
