@@ -28,6 +28,9 @@ services:
       - "3000:80"
     networks:
       - evolution-net
+    dns:
+      - 1.1.1.1
+      - 1.0.0.1
 
   redis:
     container_name: evolution_redis
