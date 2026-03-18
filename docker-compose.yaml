@@ -29,8 +29,8 @@ services:
     networks:
       - evolution-net
     dns:
-      - 1.1.1.1
-      - 1.0.0.1
+      - 8.8.8.8
+      - 8.8.4.4
 
   redis:
     container_name: evolution_redis
